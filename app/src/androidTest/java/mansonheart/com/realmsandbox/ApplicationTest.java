@@ -1,4 +1,4 @@
-package mansonheart.com.realmexamples;
+package mansonheart.com.realmsandbox;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

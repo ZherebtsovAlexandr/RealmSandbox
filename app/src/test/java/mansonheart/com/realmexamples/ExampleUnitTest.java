@@ -1,4 +1,4 @@
-package mansonheart.com.realmexamples;
+package mansonheart.com.realmsandbox;
 
 import org.junit.Test;
 

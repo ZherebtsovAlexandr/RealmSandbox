@@ -1,4 +1,4 @@
-package mansonheart.com.realmexamples.realm
+package mansonheart.com.realmsandbox.realm
 
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey

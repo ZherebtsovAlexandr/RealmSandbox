@@ -1,4 +1,4 @@
-package mansonheart.com.realmexamples
+package mansonheart.com.realmsandbox
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
