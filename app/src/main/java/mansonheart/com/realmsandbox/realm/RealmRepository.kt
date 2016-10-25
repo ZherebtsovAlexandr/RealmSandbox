@@ -40,9 +40,9 @@ open class RealmRepository(val logger: (String) -> Unit = {}) {
     }
 
     fun unsubscribe(realmThread: RealmThread) {
-        logger.invoke("Unsubscribe on thread ${Thread.currentThread().name}")
+        logger.invoke("Unsubscribe on thread ${realmThread.name}")
         realmThread.shutdown()
-        logger.invoke("Realm was closed on thread ${Thread.currentThread().name}")
+        logger.invoke("Realm was closed on thread ${realmThread.name}")
     }
 
     private fun getRealm(): Realm {
