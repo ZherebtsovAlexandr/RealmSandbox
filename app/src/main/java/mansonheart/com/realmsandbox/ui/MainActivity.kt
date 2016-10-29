@@ -1,4 +1,4 @@
-package mansonheart.com.realmsandbox
+package mansonheart.com.realmsandbox.ui
 
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import mansonheart.com.realmsandbox.R
 import mansonheart.com.realmsandbox.realm.RealmRepository
 import mansonheart.com.realmsandbox.realm.RealmThread
 import mansonheart.com.realmsandbox.realm.User

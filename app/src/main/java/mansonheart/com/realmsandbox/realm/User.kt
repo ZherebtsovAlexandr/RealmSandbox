@@ -1,5 +1,6 @@
 package mansonheart.com.realmsandbox.realm
 
+import io.realm.RealmList
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 
@@ -11,4 +12,5 @@ open class User(
         @PrimaryKey open var id: Int = 0,
         open var name: String = ""
 ) : RealmObject() {
+    var pets: RealmList<Pet> = RealmList()
 }
