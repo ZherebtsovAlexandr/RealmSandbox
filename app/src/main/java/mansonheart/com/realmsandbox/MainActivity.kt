@@ -1,6 +1,9 @@
 package mansonheart.com.realmsandbox
 
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.os.Bundle
+import android.support.design.widget.CoordinatorLayout
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -39,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
         val toolbar = findViewById(R.id.toolbar) as Toolbar?
+        val container = findViewById(R.id.container) as CoordinatorLayout?
         rvLog = findViewById(R.id.rv_log) as RecyclerView?
         rvItems = findViewById(R.id.rv_items) as RecyclerView?
         setSupportActionBar(toolbar)
@@ -70,6 +74,14 @@ class MainActivity : AppCompatActivity() {
                         "User #${random.nextInt(Int.MAX_VALUE)}"))
             }
         }
+
+
+        /*val bitmap = Bitmap.createBitmap(500, 500, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)*/
+        val loggerView = LoggerView(this)
+        container?.addView(loggerView)
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
