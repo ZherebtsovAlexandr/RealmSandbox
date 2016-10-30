@@ -1,7 +1,5 @@
 package mansonheart.com.realmsandbox
 
-import android.graphics.Bitmap
-import android.graphics.Canvas
 import android.os.Bundle
 import android.support.design.widget.CoordinatorLayout
 import android.support.design.widget.FloatingActionButton
@@ -11,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import mansonheart.com.realmsandbox.log.LoggerView
 import mansonheart.com.realmsandbox.realm.RealmRepository
 import mansonheart.com.realmsandbox.realm.RealmThread
 import mansonheart.com.realmsandbox.realm.User
@@ -75,12 +74,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
-        /*val bitmap = Bitmap.createBitmap(500, 500, Bitmap.Config.ARGB_8888)
-        val canvas = Canvas(bitmap)*/
         val loggerView = LoggerView(this)
         container?.addView(loggerView)
-
 
     }
 

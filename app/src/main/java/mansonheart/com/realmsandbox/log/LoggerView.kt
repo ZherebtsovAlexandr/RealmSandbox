@@ -1,4 +1,4 @@
-package mansonheart.com.realmsandbox
+package mansonheart.com.realmsandbox.log
 
 import android.content.Context
 import android.graphics.Canvas
@@ -29,8 +29,6 @@ class LoggerView : View {
 
         canvasPaint.color = Color.RED
         canvasPaint.textSize = 32f
-
-        //canvas?.drawText("Hello logger", 50f, 200f, canvasPaint)
 
     }
 
