@@ -11,6 +11,9 @@ import android.view.MenuItem
 import mansonheart.com.realmsandbox.realm.RealmRepository
 import mansonheart.com.realmsandbox.realm.RealmThread
 import mansonheart.com.realmsandbox.realm.User
+import rx.Scheduler
+import rx.functions.Action1
+import rx.schedulers.Schedulers
 import java.util.*
 import kotlin.concurrent.thread
 
@@ -59,7 +62,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        realmThread = realmRepository.get(User::class.java, task)
+        //realmThread = realmRepository.get(User::class.java, task)
+
+        val observable = realmRepository.asObservable(User::class.java);
+
+        observable
+                .subscribeOn(Schedulers.io())
+                .subscribe(task)
 
         val fabInsert = findViewById(R.id.fab_insert) as FloatingActionButton?
         fabInsert!!.setOnClickListener {
